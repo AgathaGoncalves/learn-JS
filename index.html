@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Aqui vai o código HTML que fará seu site aparecer.
+    <p id="testeId"></p>
+    <script defer>
+      var raw = "";
+
+      var requestOptions = {
+        method: 'GET',
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("viacep.com.br/ws/06226030/json/", requestOptions)
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+    </script>
+  </body>
+</html>
+
